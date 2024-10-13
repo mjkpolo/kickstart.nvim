@@ -9,10 +9,4 @@ return {
       require('Comment').setup()
     end,
   },
-  {
-    'akinsho/bufferline.nvim',
-    config = function()
-      require('bufferline').setup()
-    end,
-  },
 }
