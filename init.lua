@@ -202,8 +202,10 @@ vim.g.clipboard = {
   },
 }
 
-vim.keymap.set('n', 'gn', ':bnext<CR>', { desc = 'Move to next buffer' })
-vim.keymap.set('n', 'gp', ':bprevious<CR>', { desc = 'Move to previous buffer' })
+vim.keymap.set('n', 'gn', ':bnext<CR>', { desc = 'Move to next buffer', silent = true })
+vim.keymap.set('n', 'gp', ':bprevious<CR>', { desc = 'Move to previous buffer', silent = true })
+vim.keymap.set('n', 'gh', '0', { desc = 'Move to start of line', silent = true })
+vim.keymap.set('n', 'gl', '$', { desc = 'Move to end of line', silent = true })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
@@ -621,6 +623,7 @@ require('lazy').setup({
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
         clangd = {},
+        pylsp = {},
         -- gopls = {},
         -- pyright = {},
         -- rust_analyzer = {},
