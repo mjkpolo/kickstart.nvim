@@ -204,8 +204,10 @@ vim.g.clipboard = {
 
 vim.keymap.set('n', 'gn', ':bnext<CR>', { desc = 'Move to next buffer', silent = true })
 vim.keymap.set('n', 'gp', ':bprevious<CR>', { desc = 'Move to previous buffer', silent = true })
-vim.keymap.set({ 'n', 'v' }, 'gh', '0', { desc = 'Move to start of line', silent = true })
-vim.keymap.set({ 'n', 'v' }, 'gl', '$', { desc = 'Move to end of line', silent = true })
+vim.keymap.set('n', 'gh', '0', { desc = 'Move to start of line', silent = true })
+vim.keymap.set('n', 'gl', '$', { desc = 'Move to end of line', silent = true })
+vim.keymap.set('v', 'gh', '0', { desc = 'Move to start of line', silent = true })
+vim.keymap.set('v', 'gl', '$', { desc = 'Move to end of line', silent = true })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
